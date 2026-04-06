@@ -1,0 +1,166 @@
+{
+  "total_cases": 5,
+  "errors": 0,
+  "overall_scores": {
+    "Latency": {
+      "average": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "count": 5
+    },
+    "NoError": {
+      "average": 1.0,
+      "min": 1,
+      "max": 1,
+      "count": 5
+    },
+    "ResponseCompleteness": {
+      "average": 0.95,
+      "min": 0.75,
+      "max": 1.0,
+      "count": 5
+    },
+    "ScopeAwareness": {
+      "average": 1.0,
+      "min": 1,
+      "max": 1,
+      "count": 5
+    },
+    "ToolSelection": {
+      "average": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "count": 5
+    }
+  },
+  "per_category": {
+    "time": {
+      "Latency": {
+        "average": 1.0,
+        "count": 2
+      },
+      "NoError": {
+        "average": 1.0,
+        "count": 2
+      },
+      "ResponseCompleteness": {
+        "average": 0.875,
+        "count": 2
+      },
+      "ScopeAwareness": {
+        "average": 1.0,
+        "count": 2
+      },
+      "ToolSelection": {
+        "average": 1.0,
+        "count": 2
+      }
+    },
+    "currency": {
+      "Latency": {
+        "average": 1.0,
+        "count": 2
+      },
+      "NoError": {
+        "average": 1.0,
+        "count": 2
+      },
+      "ResponseCompleteness": {
+        "average": 1.0,
+        "count": 2
+      },
+      "ScopeAwareness": {
+        "average": 1.0,
+        "count": 2
+      },
+      "ToolSelection": {
+        "average": 1.0,
+        "count": 2
+      }
+    },
+    "multi_tool": {
+      "Latency": {
+        "average": 1.0,
+        "count": 1
+      },
+      "NoError": {
+        "average": 1.0,
+        "count": 1
+      },
+      "ResponseCompleteness": {
+        "average": 1.0,
+        "count": 1
+      },
+      "ScopeAwareness": {
+        "average": 1.0,
+        "count": 1
+      },
+      "ToolSelection": {
+        "average": 1.0,
+        "count": 1
+      }
+    }
+  },
+  "per_case": [
+    {
+      "input": "What time is it right now in Tokyo?",
+      "category": "time",
+      "scores": {
+        "ToolSelection": 1.0,
+        "ResponseCompleteness": 1.0,
+        "Latency": 1.0,
+        "NoError": 1,
+        "ScopeAwareness": 1
+      },
+      "error": null
+    },
+    {
+      "input": "I have a meeting in London at 3pm their time. What time is that in New York?",
+      "category": "time",
+      "scores": {
+        "ToolSelection": 1.0,
+        "ResponseCompleteness": 0.75,
+        "Latency": 1.0,
+        "NoError": 1,
+        "ScopeAwareness": 1
+      },
+      "error": null
+    },
+    {
+      "input": "How much is 500 US dollars in Japanese yen?",
+      "category": "currency",
+      "scores": {
+        "ToolSelection": 1.0,
+        "ResponseCompleteness": 1.0,
+        "Latency": 1.0,
+        "NoError": 1,
+        "ScopeAwareness": 1
+      },
+      "error": null
+    },
+    {
+      "input": "What is the current exchange rate between the Euro and British Pound?",
+      "category": "currency",
+      "scores": {
+        "ToolSelection": 1.0,
+        "ResponseCompleteness": 1.0,
+        "Latency": 1.0,
+        "NoError": 1,
+        "ScopeAwareness": 1
+      },
+      "error": null
+    },
+    {
+      "input": "I am planning a business trip from New York to Tokyo. How long is the flight route by driving to JFK first, what is the current time in Tokyo, what is the weather there, what is the USD to JPY exchange rate, and what are the top business hotels in Shinjuku?",
+      "category": "multi_tool",
+      "scores": {
+        "ToolSelection": 1.0,
+        "ResponseCompleteness": 1.0,
+        "Latency": 1.0,
+        "NoError": 1,
+        "ScopeAwareness": 1
+      },
+      "error": null
+    }
+  ]
+}
