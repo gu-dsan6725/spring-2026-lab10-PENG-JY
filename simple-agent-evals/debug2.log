@@ -1,0 +1,287 @@
+2026-04-06 14:30:10,123,p7891,{eval.py:829},INFO,Starting Simple Agent Evaluations
+2026-04-06 14:30:10,124,p7891,{eval.py:96},INFO,Loaded 5 test cases from dataset2.json
+2026-04-06 14:30:10,125,p7891,{eval.py:834},INFO,Loaded 5 test cases
+2026-04-06 14:30:10,213,p7891,{eval.py:880},INFO,Running Braintrust evaluation...
+Experiment main-1775528430 is running at https://www.braintrust.dev/app/6725/p/simple-agent-evals/experiments/main-1775528430
+2026-04-06 14:30:10,452,p7891,{eval.py:523},INFO,Running agent for test case: What time is it right now in Tokyo?...
+2026-04-06 14:30:10,701,p7891,{agent.py:111},INFO,Creating Strands agent with search, weather, directions, time, and exchange tools
+2026-04-06 14:30:10,701,p7891,{agent.py:84},INFO,Setting up Braintrust observability
+2026-04-06 14:30:10,702,p7891,{agent.py:100},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-06 14:30:10,705,p7891,{agent.py:62},INFO,Loaded system prompt from /home/ubuntu/6725/spring-2026-lab10-PENG-JY/simple-agent-evals/prompts/system_prompt.txt (1067 chars)
+2026-04-06 14:30:10,738,p7891,{agent.py:142},INFO,Agent created successfully
+2026-04-06 14:30:10,738,p7891,{eval.py:116},INFO,Running agent on: What time is it right now in Tokyo?...
+2026-04-06 14:30:10,740,p7891,{metrics.py:557},INFO,Creating Strands MetricsClient
+2026-04-06 14:30:11,498,p7891,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 14:30:11,562,p7891,{tools.py:403},INFO,[Tool] get_current_time: city='Tokyo'
+2026-04-06 14:30:11,563,p7891,{tools.py:423},INFO,[Tool] get_current_time: Tokyo -> 2026-04-06 23:30:11 JST
+2026-04-06 14:30:12,384,p7891,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+/home/ubuntu/6725/spring-2026-lab10-PENG-JY/.venv/lib/python3.12/site-packages/pydantic/main.py:464: UserWarning: Pydantic serializer warnings:
+  PydanticSerializationUnexpectedValue(Expected `ParsedTextBlock[TypeVar]` - serialized value may not be as expected [field_name='content', input_value=ParsedTextBlock(citations...xt', parsed_output=None), input_type=ParsedTextBlock])
+  PydanticSerializationUnexpectedValue(Expected `ThinkingBlock` - serialized value may not be as expected [field_name='content', input_value=ParsedTextBlock(citations...xt', parsed_output=None), input_type=ParsedTextBlock])
+  PydanticSerializationUnexpectedValue(Expected `RedactedThinkingBlock` - serialized value may not be as expected [field_name='content', input_value=ParsedTextBlock(citations...xt', parsed_output=None), input_type=ParsedTextBlock])
+  PydanticSerializationUnexpectedValue(Expected `ToolUseBlock` - serialized value may not be as expected [field_name='content', input_value=ParsedTextBlock(citations...xt', parsed_output=None), input_type=ParsedTextBlock])
+  PydanticSerializationUnexpectedValue(Expected `ServerToolUseBlock` - serialized value may not be as expected [field_name='content', input_value=ParsedTextBlock(citations...xt', parsed_output=None), input_type=ParsedTextBlock])
+  PydanticSerializationUnexpectedValue(Expected `WebSearchToolResultBlock` - serialized value may not be as expected [field_name='content', input_value=ParsedTextBlock(citations...xt', parsed_output=None), input_type=ParsedTextBlock])
+  return self.__pydantic_serializer__.to_python(
+2026-04-06 14:30:12,851,p7891,{eval.py:127},INFO,Agent responded in 2.1s, tools used: ['get_current_time']
+2026-04-06 14:30:12,852,p7891,{eval.py:523},INFO,Running agent for test case: I have a meeting in London at 3pm their time. What time is...
+2026-04-06 14:30:12,852,p7891,{agent.py:111},INFO,Creating Strands agent with search, weather, directions, time, and exchange tools
+2026-04-06 14:30:12,852,p7891,{agent.py:84},INFO,Setting up Braintrust observability
+2026-04-06 14:30:12,854,p7891,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-06 14:30:12,854,p7891,{agent.py:100},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-06 14:30:12,856,p7891,{agent.py:62},INFO,Loaded system prompt from /home/ubuntu/6725/spring-2026-lab10-PENG-JY/simple-agent-evals/prompts/system_prompt.txt (1067 chars)
+2026-04-06 14:30:12,903,p7891,{agent.py:142},INFO,Agent created successfully
+2026-04-06 14:30:12,903,p7891,{eval.py:116},INFO,Running agent on: I have a meeting in London at 3pm their time. What time is that in New York?...
+2026-04-06 14:30:13,701,p7891,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 14:30:13,935,p7891,{tools.py:403},INFO,[Tool] get_current_time: city='London'
+2026-04-06 14:30:13,936,p7891,{tools.py:423},INFO,[Tool] get_current_time: London -> 2026-04-06 15:30:13 BST
+2026-04-06 14:30:13,937,p7891,{tools.py:403},INFO,[Tool] get_current_time: city='New York'
+2026-04-06 14:30:13,938,p7891,{tools.py:423},INFO,[Tool] get_current_time: New York -> 2026-04-06 10:30:13 EDT
+2026-04-06 14:30:14,883,p7891,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 14:30:16,352,p7891,{eval.py:127},INFO,Agent responded in 3.5s, tools used: ['get_current_time', 'get_current_time']
+2026-04-06 14:30:16,352,p7891,{eval.py:523},INFO,Running agent for test case: How much is 500 US dollars in Japanese yen?...
+2026-04-06 14:30:16,353,p7891,{agent.py:111},INFO,Creating Strands agent with search, weather, directions, time, and exchange tools
+2026-04-06 14:30:16,353,p7891,{agent.py:84},INFO,Setting up Braintrust observability
+2026-04-06 14:30:16,354,p7891,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-06 14:30:16,355,p7891,{agent.py:100},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-06 14:30:16,357,p7891,{agent.py:62},INFO,Loaded system prompt from /home/ubuntu/6725/spring-2026-lab10-PENG-JY/simple-agent-evals/prompts/system_prompt.txt (1067 chars)
+2026-04-06 14:30:16,389,p7891,{agent.py:142},INFO,Agent created successfully
+2026-04-06 14:30:16,389,p7891,{eval.py:116},INFO,Running agent on: How much is 500 US dollars in Japanese yen?...
+2026-04-06 14:30:17,124,p7891,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 14:30:17,251,p7891,{tools.py:454},INFO,[Tool] get_exchange_rate: base='USD', target='JPY', amount=500.0
+2026-04-06 14:30:17,368,p7891,{tools.py:484},INFO,[Tool] get_exchange_rate: 500.0 USD -> 79900.0 JPY
+2026-04-06 14:30:18,091,p7891,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 14:30:18,350,p7891,{eval.py:127},INFO,Agent responded in 2.0s, tools used: ['get_exchange_rate']
+2026-04-06 14:30:18,351,p7891,{eval.py:523},INFO,Running agent for test case: What is the current exchange rate between the Euro and Bri...
+2026-04-06 14:30:18,351,p7891,{agent.py:111},INFO,Creating Strands agent with search, weather, directions, time, and exchange tools
+2026-04-06 14:30:18,351,p7891,{agent.py:84},INFO,Setting up Braintrust observability
+2026-04-06 14:30:18,353,p7891,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-06 14:30:18,353,p7891,{agent.py:100},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-06 14:30:18,355,p7891,{agent.py:62},INFO,Loaded system prompt from /home/ubuntu/6725/spring-2026-lab10-PENG-JY/simple-agent-evals/prompts/system_prompt.txt (1067 chars)
+2026-04-06 14:30:18,387,p7891,{agent.py:142},INFO,Agent created successfully
+2026-04-06 14:30:18,387,p7891,{eval.py:116},INFO,Running agent on: What is the current exchange rate between the Euro and British Pound?...
+2026-04-06 14:30:19,152,p7891,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 14:30:19,281,p7891,{tools.py:454},INFO,[Tool] get_exchange_rate: base='EUR', target='GBP', amount=1.0
+2026-04-06 14:30:19,394,p7891,{tools.py:484},INFO,[Tool] get_exchange_rate: 1.0 EUR -> 0.853 GBP
+2026-04-06 14:30:20,113,p7891,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 14:30:20,351,p7891,{eval.py:127},INFO,Agent responded in 2.0s, tools used: ['get_exchange_rate']
+2026-04-06 14:30:20,352,p7891,{eval.py:523},INFO,Running agent for test case: I am planning a business trip from New York to Tokyo. How lo...
+2026-04-06 14:30:20,352,p7891,{agent.py:111},INFO,Creating Strands agent with search, weather, directions, time, and exchange tools
+2026-04-06 14:30:20,352,p7891,{agent.py:84},INFO,Setting up Braintrust observability
+2026-04-06 14:30:20,354,p7891,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-06 14:30:20,354,p7891,{agent.py:100},INFO,Braintrust observability configured for project: project_name:simple-agent-evals
+2026-04-06 14:30:20,357,p7891,{agent.py:62},INFO,Loaded system prompt from /home/ubuntu/6725/spring-2026-lab10-PENG-JY/simple-agent-evals/prompts/system_prompt.txt (1067 chars)
+2026-04-06 14:30:20,389,p7891,{agent.py:142},INFO,Agent created successfully
+2026-04-06 14:30:20,389,p7891,{eval.py:116},INFO,Running agent on: I am planning a business trip from New York to Tokyo. How long is the flight rou...
+2026-04-06 14:30:20,791,p7891,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 14:30:22,213,p7891,{tools.py:325},INFO,[Tool] get_directions: 'New York' -> 'JFK Airport'
+2026-04-06 14:30:22,214,p7891,{tools.py:89},INFO,[Tool] Geocoding location: New York
+2026-04-06 14:30:22,215,p7891,{tools.py:403},INFO,[Tool] get_current_time: city='Tokyo'
+2026-04-06 14:30:22,216,p7891,{tools.py:423},INFO,[Tool] get_current_time: Tokyo -> 2026-04-06 23:30:22 JST
+2026-04-06 14:30:22,217,p7891,{tools.py:237},INFO,[Tool] get_weather: location='Tokyo'
+2026-04-06 14:30:22,218,p7891,{tools.py:89},INFO,[Tool] Geocoding location: Tokyo
+2026-04-06 14:30:22,219,p7891,{tools.py:454},INFO,[Tool] get_exchange_rate: base='USD', target='JPY', amount=1.0
+2026-04-06 14:30:22,220,p7891,{tools.py:183},INFO,[Tool] duckduckgo_search: query='top business hotels in Shinjuku Tokyo', max_results=5
+2026-04-06 14:30:22,301,p7891,{tools.py:108},INFO,[Tool] Geocoded 'Tokyo' to: 東京都, 日本
+2026-04-06 14:30:22,315,p7891,{tools.py:108},INFO,[Tool] Geocoded 'New York' to: New York, United States
+2026-04-06 14:30:22,401,p7891,{tools.py:484},INFO,[Tool] get_exchange_rate: 1.0 USD -> 159.8 JPY
+2026-04-06 14:30:22,531,p7891,{lib.rs:404},INFO,response: https://grokipedia.com/api/typeahead?query=top+business+hotels+in+Shinjuku+Tokyo&limit=1 200
+2026-04-06 14:30:22,544,p7891,{lib.rs:404},INFO,response: https://en.wikipedia.org/w/api.php?action=opensearch&profile=fuzzy&limit=1&search=top%20business%20hotels%20in%20Shinjuku%20Tokyo 200
+2026-04-06 14:30:22,601,p7891,{ddgs.py:198},INFO,Error in engine yahoo: DDGSException("RequestError: RequestError('error sending request for url (https://search.yahoo.com/search;_ylt=VfoE09WVYBzRHZ94lc899IJa;_ylu=1Dtwda0BmIn0CPljYky0MtKYhFrzcpcJ-RPPn6exVGaYLkc?p=top+business+hotels+in+Shinjuku+Tokyo)', 'https://search.yahoo.com/search;_ylt=VfoE09WVYBzRHZ94lc899IJa;_ylu=1Dtwda0BmIn0CPljYky0MtKYhFrzcpcJ-RPPn6exVGaYLkc?p=top+business+hotels+in+Shinjuku+Tokyo')")
+2026-04-06 14:30:22,754,p7891,{tools.py:266},INFO,[Tool] get_weather: Tokyo -> 58.2F
+2026-04-06 14:30:22,841,p7891,{lib.rs:404},INFO,response: https://yandex.com/search/site/?text=top+business+hotels+in+Shinjuku+Tokyo&web=1&searchid=2823103 200
+2026-04-06 14:30:22,867,p7891,{tools.py:188},INFO,[Tool] duckduckgo_search: found 5 results
+2026-04-06 14:30:22,881,p7891,{tools.py:89},INFO,[Tool] Geocoding location: JFK Airport
+2026-04-06 14:30:22,923,p7891,{tools.py:108},INFO,[Tool] Geocoded 'JFK Airport' to: John F. Kennedy International Airport, JFK Access Road, Queens, Queens County, New York, 11430, United States
+2026-04-06 14:30:24,311,p7891,{tools.py:371},INFO,[Tool] get_directions: 19.3 miles, 34 minutes
+2026-04-06 14:30:25,102,p7891,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 14:30:29,851,p7891,{eval.py:127},INFO,Agent responded in 9.5s, tools used: ['get_directions', 'get_current_time', 'get_weather', 'get_exchange_rate', 'duckduckgo_search']
+
+Tool #1: get_current_time
+The current time in Tokyo is **11:30 PM (23:30)** on Sunday, April 6, 2026.
+
+- **Timezone**: Japan Standard Time (JST)
+- **UTC Offset**: +09:00
+
+Tokyo does not observe daylight saving time, so it remains UTC+9 year-round.
+Tool #1: get_current_time
+
+Tool #2: get_current_time
+Here are the current local times for your meeting:
+
+**London:** 3:30 PM BST (British Summer Time, UTC+1) — April 6, 2026
+**New York:** 10:30 AM EDT (Eastern Daylight Time, UTC-4) — April 6, 2026
+
+The time difference is **5 hours** (London is ahead of New York). Therefore, your **3:00 PM London meeting = 10:00 AM New York time**.
+Tool #1: get_exchange_rate
+Based on today's exchange rate, **500 USD is approximately 79,900 JPY**.
+
+- **Exchange Rate**: 1 USD = 159.8 JPY (as of April 4, 2026)
+- **Calculation**: 500 × 159.8 = **79,900 JPY**
+
+Note: Exchange rates fluctuate daily. For large transactions, verify the current rate with your bank or a financial service.
+Tool #1: get_exchange_rate
+The current EUR to GBP exchange rate is:
+
+- **1 EUR = 0.8530 GBP** (as of April 4, 2026)
+- Equivalently, **1 GBP ≈ 1.1723 EUR**
+
+This rate is sourced from the Frankfurter API using European Central Bank data.
+Tool #1: get_directions
+
+Tool #2: get_current_time
+
+Tool #3: get_weather
+
+Tool #4: get_exchange_rate
+
+Tool #5: duckduckgo_search
+Here's a comprehensive summary for your business trip from New York to Tokyo:
+
+## Driving to JFK Airport
+**Distance & Time:** 19.3 miles, approximately **34 minutes** from central New York to JFK Airport. The route takes you via the Brooklyn Bridge, Brooklyn-Queens Expressway, Long Island Expressway, Grand Central Parkway, and Van Wyck Expressway.
+
+## Current Time in Tokyo
+**11:30 PM JST (Japan Standard Time)** on April 6, 2026
+Tokyo is 13 hours ahead of Eastern Daylight Time (EDT).
+
+## Weather in Tokyo
+- **Temperature:** 58.2°F (approximately 14.6°C)
+- **Wind Speed:** 5.3 mph (light winds)
+- **Conditions:** Clear/Partly cloudy
+
+## Currency Exchange Rate
+**1 USD = 159.8 JPY** (as of April 4, 2026)
+
+## Top Business Hotels in Shinjuku
+
+Based on my search, here are recommended business hotels in Shinjuku:
+
+1. **Park Hyatt Tokyo** - Premium luxury option, iconic views
+2. **Kimpton Shinjuku Tokyo (by IHG)** - Luxury business hotel with modern amenities
+3. **Hilton Tokyo** - Well-established business hotel near Shinjuku Station
+4. **Keio Plaza Hotel Tokyo** - Good value for business travelers
+5. **Shinjuku Washington Hotel** - Business-focused amenities, central location
+6. **APA Hotel Higashi-Shinjuku-Ekimae** - Budget-friendly option (from ~9,000 JPY / ~$56 USD)
+
+Shinjuku offers excellent transportation links and is well-connected to major business districts. For premium business travel, I'd recommend the Park Hyatt Tokyo or Hilton Tokyo.
+simple-agent-evals (data): 0it [00:00, ?it/s]
+simple-agent-evals (data): 5it [00:00, 36418.22it/s]
+
+simple-agent-evals (tasks):   0%|          | 0/5 [00:00<?, ?it/s]2026-04-06 14:30:35,114,p7891,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+Could not find key 'criteria'
+2026-04-06 14:30:44,782,p7891,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-06 14:30:53,941,p7891,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+Could not find key 'criteria'
+2026-04-06 14:31:01,508,p7891,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-06 14:31:09,562,p7891,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+Could not find key 'criteria'
+2026-04-06 14:31:17,091,p7891,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-06 14:31:25,895,p7891,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+Could not find key 'criteria'
+2026-04-06 14:31:34,762,p7891,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-06 14:31:43,601,p7891,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+Could not find key 'criteria'
+2026-04-06 14:31:58,114,p7891,{_client.py:1025},INFO,HTTP Request: POST https://api.anthropic.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-06 14:31:58,182,p7891,{base_events.py:1821},ERROR,Task exception was never retrieved
+future: <Task finished name='Task-109' coro=<AsyncClient.aclose() done, defined at /home/ubuntu/6725/spring-2026-lab10-PENG-JY/.venv/lib/python3.12/site-packages/httpx/_client.py:1978> exception=RuntimeError('Event loop is closed')>
+Traceback (most recent call last):
+  File "/home/ubuntu/6725/spring-2026-lab10-PENG-JY/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1985, in aclose
+    await self._transport.aclose()
+  File "/home/ubuntu/6725/spring-2026-lab10-PENG-JY/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 406, in aclose
+    await self._pool.aclose()
+  File "/home/ubuntu/6725/spring-2026-lab10-PENG-JY/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 353, in aclose
+    await self._close_connections(closing_connections)
+  File "/home/ubuntu/6725/spring-2026-lab10-PENG-JY/.venv/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 345, in _close_connections
+    await connection.aclose()
+  File "/home/ubuntu/6725/spring-2026-lab10-PENG-JY/.venv/lib/python3.12/site-packages/httpcore/_async/connection.py", line 173, in aclose
+    await self._connection.aclose()
+  File "/home/ubuntu/6725/spring-2026-lab10-PENG-JY/.venv/lib/python3.12/site-packages/httpcore/_async/http11.py", line 258, in aclose
+    await self._network_stream.aclose()
+  File "/home/ubuntu/6725/spring-2026-lab10-PENG-JY/.venv/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 53, in aclose
+    await self._stream.aclose()
+  File "/home/ubuntu/6725/spring-2026-lab10-PENG-JY/.venv/lib/python3.12/site-packages/anyio/streams/tls.py", line 241, in aclose
+    await self.transport_stream.aclose()
+  File "/home/ubuntu/6725/spring-2026-lab10-PENG-JY/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1329, in aclose
+    self._transport.close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 1211, in close
+    super().close()
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 875, in close
+    self._loop.call_soon(self._call_connection_lost, None)
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 795, in call_soon
+    self._check_closed()
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 541, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+Found exceptions for the following scorers: Factuality, ClosedQA [TypeError("object ChatCompletion can't be used in 'await' expression"), TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality, ClosedQA [TypeError("object ChatCompletion can't be used in 'await' expression"), TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality, ClosedQA [TypeError("object ChatCompletion can't be used in 'await' expression"), TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality, ClosedQA [TypeError("object ChatCompletion can't be used in 'await' expression"), TypeError("object ChatCompletion can't be used in 'await' expression")]
+Found exceptions for the following scorers: Factuality, ClosedQA [TypeError("object ChatCompletion can't be used in 'await' expression"), TypeError("object ChatCompletion can't be used in 'await' expression")]
+
+simple-agent-evals (tasks):  20%|██        | 1/5 [01:24<05:38, 84.73s/it]
+simple-agent-evals (tasks): 100%|██████████| 5/5 [01:24<00:00, 16.94s/it]
+2026-04-06 14:32:01,274,p7891,{eval.py:656},INFO,Eval summary: 5 cases, 0 errors, scorers: Latency=100.00%, NoError=100.00%, ResponseCompleteness=100.00%, ScopeAwareness=100.00%, ToolSelection=100.00%
+2026-04-06 14:32:01,275,p7891,{eval.py:766},INFO,Evaluation metrics exported to eval_metrics2.json
+2026-04-06 14:32:01,276,p7891,{eval.py:895},INFO,Evaluation completed in 1 minutes and 51.2 seconds
+
+=========================SUMMARY=========================
+main-1775528430 compared to main-1775440152:
+100.00% (-) 'Latency'              score	(0 improvements, 0 regressions)
+100.00% (-) 'NoError'              score	(0 improvements, 0 regressions)
+100.00% (+41.67%) 'ResponseCompleteness' score	(1 improvements, 0 regressions)
+100.00% (-) 'ScopeAwareness'       score	(0 improvements, 0 regressions)
+100.00% (-) 'ToolSelection'        score	(0 improvements, 0 regressions)
+
+2 (-) 'llm_calls'                   	(0 improvements, 0 regressions)
+0 (-) 'tool_calls'                  	(0 improvements, 0 regressions)
+2 (-) 'errors'                      	(0 improvements, 0 regressions)
+0 (-) 'llm_errors'                  	(0 improvements, 0 regressions)
+0 (-) 'tool_errors'                 	(0 improvements, 0 regressions)
+0tok (-) 'prompt_tokens'               	(0 improvements, 0 regressions)
+0tok (-) 'prompt_cached_tokens'        	(0 improvements, 0 regressions)
+0tok (-) 'prompt_cache_creation_tokens'	(0 improvements, 0 regressions)
+0tok (-) 'completion_tokens'           	(0 improvements, 0 regressions)
+0tok (-) 'completion_reasoning_tokens' 	(0 improvements, 0 regressions)
+0tok (-) 'total_tokens'                	(0 improvements, 0 regressions)
+0.01s (-) 'duration'                    	(0 improvements, 0 regressions)
+
+See results for main-1775528430 at https://www.braintrust.dev/app/6725/p/simple-agent-evals/experiments/main-1775528430
+
+================================================================================
+EVALUATION SUMMARY
+================================================================================
+Total test cases: 5
+Errors: 0
+
+--------------------------------------------------------------------------------
+Scorer                          Avg Score      Min      Max    Count
+--------------------------------------------------------------------------------
+Latency                           100.00%     1.00     1.00        5
+NoError                           100.00%     1.00     1.00        5
+ResponseCompleteness              100.00%     1.00     1.00        1
+ScopeAwareness                    100.00%     1.00     1.00        5
+ToolSelection                     100.00%     1.00     1.00        5
+
+--------------------------------------------------------------------------------
+PER-CATEGORY BREAKDOWN
+--------------------------------------------------------------------------------
+
+  [currency]
+    Latency                       100.00%  (2 cases)
+    NoError                       100.00%  (2 cases)
+    ScopeAwareness                100.00%  (2 cases)
+    ToolSelection                 100.00%  (2 cases)
+
+  [multi_tool]
+    Latency                       100.00%  (1 cases)
+    NoError                       100.00%  (1 cases)
+    ResponseCompleteness          100.00%  (1 cases)
+    ScopeAwareness                100.00%  (1 cases)
+    ToolSelection                 100.00%  (1 cases)
+
+  [time]
+    Latency                       100.00%  (2 cases)
+    NoError                       100.00%  (2 cases)
+    ScopeAwareness                100.00%  (2 cases)
+    ToolSelection                 100.00%  (2 cases)

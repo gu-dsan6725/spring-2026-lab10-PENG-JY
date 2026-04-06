@@ -1,0 +1,224 @@
+2026-04-06 15:00:10,412,p8124,{eval.py:805},INFO,Starting Multi-Turn Agent Evaluations
+2026-04-06 15:00:10,413,p8124,{eval.py:139},INFO,Loaded 5 scenarios from scenarios.json
+2026-04-06 15:00:10,413,p8124,{eval.py:813},INFO,Running 5 of 10 scenarios (use --sample-size 0 for all)
+2026-04-06 15:00:10,414,p8124,{eval.py:826},INFO,--- Scenario 1/5: Polite customer checks order status ---
+2026-04-06 15:00:10,415,p8124,{agent.py:110},INFO,Creating customer support agent with 5 tools
+2026-04-06 15:00:10,415,p8124,{agent.py:83},INFO,Setting up Braintrust observability
+2026-04-06 15:00:10,416,p8124,{agent.py:99},INFO,Braintrust observability configured for project: project_name:multi-turn-agent-evals
+2026-04-06 15:00:10,419,p8124,{agent.py:61},INFO,Loaded system prompt from /home/ubuntu/6725/spring-2026-lab10-PENG-JY/multi-turn-agent-evals/prompts/system_prompt.txt (940 chars)
+2026-04-06 15:00:10,451,p8124,{agent.py:139},INFO,Customer support agent created successfully
+2026-04-06 15:00:10,452,p8124,{eval.py:269},INFO,Starting multi-turn conversation: 'Polite customer checks order status' (persona=polite, max_turns=6)
+2026-04-06 15:00:10,452,p8124,{eval.py:273},INFO,  Turn 1: user says: Hi there! I placed an order recently and I'd like to check on its status. My o...
+2026-04-06 15:00:11,318,p8124,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 15:00:11,384,p8124,{tools.py:197},INFO,[Tool] lookup_order: order_id='ORD-1001'
+2026-04-06 15:00:11,385,p8124,{tools.py:204},INFO,[Tool] lookup_order: found order ORD-1001, status=shipped
+2026-04-06 15:00:12,201,p8124,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 15:00:13,047,p8124,{eval.py:281},INFO,  Turn 1: agent responds: Hello! Thank you for reaching out to TechGadgets. I've looked up your or...
+2026-04-06 15:00:16,882,p8124,{eval.py:273},INFO,  Turn 2: user says: Thank you so much! I see it says the estimated delivery was March 26th — it...
+2026-04-06 15:00:17,701,p8124,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 15:00:19,134,p8124,{eval.py:281},INFO,  Turn 2: agent responds: Great question! If your tracking shows delivered but you haven't received...
+2026-04-06 15:00:22,918,p8124,{eval.py:302},INFO,  Turn 2: goal completed (actor sent stop token)
+2026-04-06 15:00:22,918,p8124,{eval.py:307},INFO,Conversation 'Polite customer checks order status' finished: 2 turns, goal_completed=True, tools=['lookup_order'], elapsed=12.5s
+2026-04-06 15:00:22,919,p8124,{eval.py:841},INFO,Scores: GoalCompletion=1.00, ToolUsage=1.00, TurnEfficiency=0.80, ConversationQuality=1.00, PolicyAdherence=1.00
+2026-04-06 15:00:22,920,p8124,{eval.py:826},INFO,--- Scenario 2/5: Demanding customer wants order update ---
+2026-04-06 15:00:22,920,p8124,{agent.py:110},INFO,Creating customer support agent with 5 tools
+2026-04-06 15:00:22,920,p8124,{agent.py:83},INFO,Setting up Braintrust observability
+2026-04-06 15:00:22,922,p8124,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-06 15:00:22,922,p8124,{agent.py:99},INFO,Braintrust observability configured for project: project_name:multi-turn-agent-evals
+2026-04-06 15:00:22,924,p8124,{agent.py:61},INFO,Loaded system prompt from /home/ubuntu/6725/spring-2026-lab10-PENG-JY/multi-turn-agent-evals/prompts/system_prompt.txt (940 chars)
+2026-04-06 15:00:22,958,p8124,{agent.py:139},INFO,Customer support agent created successfully
+2026-04-06 15:00:22,958,p8124,{eval.py:269},INFO,Starting multi-turn conversation: 'Demanding customer wants order update' (persona=demanding, max_turns=6)
+2026-04-06 15:00:22,959,p8124,{eval.py:273},INFO,  Turn 1: user says: Where is my order ORD-1002?! It should have been here by now!...
+2026-04-06 15:00:23,814,p8124,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 15:00:23,879,p8124,{tools.py:197},INFO,[Tool] lookup_order: order_id='ORD-1002'
+2026-04-06 15:00:23,880,p8124,{tools.py:204},INFO,[Tool] lookup_order: found order ORD-1002, status=delivered
+2026-04-06 15:00:24,703,p8124,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 15:00:25,591,p8124,{eval.py:281},INFO,  Turn 1: agent responds: I understand your frustration, and I apologize for any inconvenience. I'v...
+2026-04-06 15:00:29,342,p8124,{eval.py:273},INFO,  Turn 2: user says: Well, I don't remember seeing it. How do I know it was actually delivered? I ...
+2026-04-06 15:00:30,187,p8124,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 15:00:31,523,p8124,{eval.py:281},INFO,  Turn 2: agent responds: Our records show delivery on March 14th with tracking number TRK-88898765...
+2026-04-06 15:00:35,114,p8124,{eval.py:302},INFO,  Turn 2: goal completed (actor sent stop token)
+2026-04-06 15:00:35,115,p8124,{eval.py:307},INFO,Conversation 'Demanding customer wants order update' finished: 2 turns, goal_completed=True, tools=['lookup_order'], elapsed=12.2s
+2026-04-06 15:00:35,115,p8124,{eval.py:841},INFO,Scores: GoalCompletion=1.00, ToolUsage=1.00, TurnEfficiency=0.80, ConversationQuality=1.00, PolicyAdherence=1.00
+2026-04-06 15:00:35,116,p8124,{eval.py:826},INFO,--- Scenario 3/5: Customer wants to return a product ---
+2026-04-06 15:00:35,116,p8124,{agent.py:110},INFO,Creating customer support agent with 5 tools
+2026-04-06 15:00:35,116,p8124,{agent.py:83},INFO,Setting up Braintrust observability
+2026-04-06 15:00:35,118,p8124,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-06 15:00:35,118,p8124,{agent.py:99},INFO,Braintrust observability configured for project: project_name:multi-turn-agent-evals
+2026-04-06 15:00:35,121,p8124,{agent.py:61},INFO,Loaded system prompt from /home/ubuntu/6725/spring-2026-lab10-PENG-JY/multi-turn-agent-evals/prompts/system_prompt.txt (940 chars)
+2026-04-06 15:00:35,154,p8124,{agent.py:139},INFO,Customer support agent created successfully
+2026-04-06 15:00:35,154,p8124,{eval.py:269},INFO,Starting multi-turn conversation: 'Customer wants to return a product' (persona=neutral, max_turns=6)
+2026-04-06 15:00:35,155,p8124,{eval.py:273},INFO,  Turn 1: user says: I received my order ORD-1002 but the laptop stand is wobbly. I want to return...
+2026-04-06 15:00:36,021,p8124,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 15:00:36,088,p8124,{tools.py:197},INFO,[Tool] lookup_order: order_id='ORD-1002'
+2026-04-06 15:00:36,089,p8124,{tools.py:204},INFO,[Tool] lookup_order: found order ORD-1002, status=delivered
+2026-04-06 15:00:36,090,p8124,{tools.py:265},INFO,[Tool] process_return: order_id='ORD-1002', reason='defective product - wobbly laptop stand'
+2026-04-06 15:00:36,091,p8124,{tools.py:300},INFO,[Tool] process_return: return RET-1002 initiated for ORD-1002
+2026-04-06 15:00:37,108,p8124,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 15:00:38,324,p8124,{eval.py:281},INFO,  Turn 1: agent responds: I'm sorry to hear the laptop stand isn't working properly. I've looked up y...
+2026-04-06 15:00:42,018,p8124,{eval.py:273},INFO,  Turn 2: user says: Great, thank you. Will I get a refund for the full amount?...
+2026-04-06 15:00:42,891,p8124,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 15:00:44,203,p8124,{eval.py:281},INFO,  Turn 2: agent responds: Yes, you will receive a full refund of $79.97, which covers your entire or...
+2026-04-06 15:00:47,831,p8124,{eval.py:302},INFO,  Turn 2: goal completed (actor sent stop token)
+2026-04-06 15:00:47,832,p8124,{eval.py:307},INFO,Conversation 'Customer wants to return a product' finished: 2 turns, goal_completed=True, tools=['lookup_order', 'process_return'], elapsed=12.7s
+2026-04-06 15:00:47,832,p8124,{eval.py:841},INFO,Scores: GoalCompletion=1.00, ToolUsage=1.00, TurnEfficiency=0.80, ConversationQuality=1.00, PolicyAdherence=1.00
+2026-04-06 15:00:47,833,p8124,{eval.py:826},INFO,--- Scenario 4/5: Confused customer needs product help ---
+2026-04-06 15:00:47,833,p8124,{agent.py:110},INFO,Creating customer support agent with 5 tools
+2026-04-06 15:00:47,833,p8124,{agent.py:83},INFO,Setting up Braintrust observability
+2026-04-06 15:00:47,835,p8124,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-06 15:00:47,836,p8124,{agent.py:99},INFO,Braintrust observability configured for project: project_name:multi-turn-agent-evals
+2026-04-06 15:00:47,838,p8124,{agent.py:61},INFO,Loaded system prompt from /home/ubuntu/6725/spring-2026-lab10-PENG-JY/multi-turn-agent-evals/prompts/system_prompt.txt (940 chars)
+2026-04-06 15:00:47,871,p8124,{agent.py:139},INFO,Customer support agent created successfully
+2026-04-06 15:00:47,872,p8124,{eval.py:269},INFO,Starting multi-turn conversation: 'Confused customer needs product help' (persona=confused, max_turns=6)
+2026-04-06 15:00:47,872,p8124,{eval.py:273},INFO,  Turn 1: user says: Um, I'm looking for something... I think headphones? Or maybe earbuds? What do...
+2026-04-06 15:00:48,741,p8124,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 15:00:48,806,p8124,{tools.py:231},INFO,[Tool] search_products: query='headphones', category='', max_price=0.0
+2026-04-06 15:00:48,807,p8124,{tools.py:240},INFO,[Tool] search_products: found 1 results
+2026-04-06 15:00:48,808,p8124,{tools.py:231},INFO,[Tool] search_products: query='earbuds', category='', max_price=0.0
+2026-04-06 15:00:48,809,p8124,{tools.py:240},INFO,[Tool] search_products: found 1 results
+2026-04-06 15:00:49,924,p8124,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 15:00:51,283,p8124,{eval.py:281},INFO,  Turn 1: agent responds: No problem at all! Let me show you what we have. For working from home, I...
+2026-04-06 15:00:55,614,p8124,{eval.py:273},INFO,  Turn 2: user says: Hmm, I'm not sure. I mostly sit at my desk. Are the earbuds really worth the...
+2026-04-06 15:00:56,481,p8124,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 15:00:58,102,p8124,{eval.py:281},INFO,  Turn 2: agent responds: For someone who sits at a desk all day, the Wireless Bluetooth Headphones...
+2026-04-06 15:01:02,438,p8124,{eval.py:273},INFO,  Turn 3: user says: Okay that makes sense. But do both connect to a computer via Bluetooth?...
+2026-04-06 15:01:03,311,p8124,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 15:01:05,024,p8124,{eval.py:281},INFO,  Turn 3: agent responds: Yes, both products support standard Bluetooth 5.0 and connect seamlessly to...
+2026-04-06 15:01:09,217,p8124,{eval.py:302},INFO,  Turn 3: goal completed (actor sent stop token)
+2026-04-06 15:01:09,217,p8124,{eval.py:307},INFO,Conversation 'Confused customer needs product help' finished: 3 turns, goal_completed=True, tools=['search_products'], elapsed=21.3s
+2026-04-06 15:01:09,218,p8124,{eval.py:841},INFO,Scores: GoalCompletion=1.00, ToolUsage=1.00, TurnEfficiency=0.60, ConversationQuality=1.00, PolicyAdherence=1.00
+2026-04-06 15:01:09,218,p8124,{eval.py:826},INFO,--- Scenario 5/5: Customer changes shipping address ---
+2026-04-06 15:01:09,219,p8124,{agent.py:110},INFO,Creating customer support agent with 5 tools
+2026-04-06 15:01:09,219,p8124,{agent.py:83},INFO,Setting up Braintrust observability
+2026-04-06 15:01:09,220,p8124,{__init__.py:567},WARNING,Overriding of current TracerProvider is not allowed
+2026-04-06 15:01:09,221,p8124,{agent.py:99},INFO,Braintrust observability configured for project: project_name:multi-turn-agent-evals
+2026-04-06 15:01:09,223,p8124,{agent.py:61},INFO,Loaded system prompt from /home/ubuntu/6725/spring-2026-lab10-PENG-JY/multi-turn-agent-evals/prompts/system_prompt.txt (940 chars)
+2026-04-06 15:01:09,257,p8124,{agent.py:139},INFO,Customer support agent created successfully
+2026-04-06 15:01:09,257,p8124,{eval.py:269},INFO,Starting multi-turn conversation: 'Customer changes shipping address' (persona=polite, max_turns=6)
+2026-04-06 15:01:09,258,p8124,{eval.py:273},INFO,  Turn 1: user says: I just placed order ORD-1003 but I realized I need to change the shipping addr...
+2026-04-06 15:01:10,121,p8124,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 15:01:10,188,p8124,{tools.py:197},INFO,[Tool] lookup_order: order_id='ORD-1003'
+2026-04-06 15:01:10,189,p8124,{tools.py:204},INFO,[Tool] lookup_order: found order ORD-1003, status=pending
+2026-04-06 15:01:10,190,p8124,{tools.py:366},INFO,[Tool] update_shipping_address: order_id='ORD-1003', new_address='100 Broadway, New York, NY 10005'
+2026-04-06 15:01:10,191,p8124,{tools.py:386},INFO,[Tool] update_shipping_address: updated ORD-1003 address
+2026-04-06 15:01:11,208,p8124,{_client.py:1740},INFO,HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-04-06 15:01:12,944,p8124,{eval.py:281},INFO,  Turn 1: agent responds: Of course! I've verified that your order ORD-1003 is still pending and hasn...
+2026-04-06 15:01:16,589,p8124,{eval.py:302},INFO,  Turn 1: goal completed (actor sent stop token)
+2026-04-06 15:01:16,590,p8124,{eval.py:307},INFO,Conversation 'Customer changes shipping address' finished: 1 turns, goal_completed=True, tools=['lookup_order', 'update_shipping_address'], elapsed=7.3s
+2026-04-06 15:01:16,590,p8124,{eval.py:841},INFO,Scores: GoalCompletion=1.00, ToolUsage=1.00, TurnEfficiency=1.00, ConversationQuality=1.00, PolicyAdherence=1.00
+
+================================================================================
+MULTI-TURN EVALUATION SUMMARY
+================================================================================
+Total scenarios: 5
+
+--------------------------------------------------------------------------------
+Scorer                    Avg Score      Min      Max    Count
+--------------------------------------------------------------------------------
+GoalCompletion             100.00%     1.00     1.00        5
+ToolUsage                  100.00%     1.00     1.00        5
+TurnEfficiency              80.00%     0.60     1.00        5
+ConversationQuality        100.00%     1.00     1.00        5
+PolicyAdherence            100.00%     1.00     1.00        5
+
+--------------------------------------------------------------------------------
+PER-CATEGORY BREAKDOWN
+--------------------------------------------------------------------------------
+
+  [order_change]
+    GoalCompletion          100.00%  (1 cases)
+    ToolUsage               100.00%  (1 cases)
+    TurnEfficiency          100.00%  (1 cases)
+    ConversationQuality     100.00%  (1 cases)
+    PolicyAdherence         100.00%  (1 cases)
+
+  [order_status]
+    GoalCompletion          100.00%  (2 cases)
+    ToolUsage               100.00%  (2 cases)
+    TurnEfficiency           80.00%  (2 cases)
+    ConversationQuality     100.00%  (2 cases)
+    PolicyAdherence         100.00%  (2 cases)
+
+  [product_search]
+    GoalCompletion          100.00%  (1 cases)
+    ToolUsage               100.00%  (1 cases)
+    TurnEfficiency           60.00%  (1 cases)
+    ConversationQuality     100.00%  (1 cases)
+    PolicyAdherence         100.00%  (1 cases)
+
+  [return]
+    GoalCompletion          100.00%  (1 cases)
+    ToolUsage               100.00%  (1 cases)
+    TurnEfficiency           80.00%  (1 cases)
+    ConversationQuality     100.00%  (1 cases)
+    PolicyAdherence         100.00%  (1 cases)
+
+--------------------------------------------------------------------------------
+PER-PERSONA BREAKDOWN
+--------------------------------------------------------------------------------
+
+  [confused]
+    GoalCompletion:           100.00%  (1 cases)
+    Avg turns:                   3.0
+
+  [demanding]
+    GoalCompletion:           100.00%  (1 cases)
+    Avg turns:                   2.0
+
+  [neutral]
+    GoalCompletion:           100.00%  (1 cases)
+    Avg turns:                   2.0
+
+  [polite]
+    GoalCompletion:           100.00%  (2 cases)
+    Avg turns:                   1.5
+
+--------------------------------------------------------------------------------
+SCENARIO DETAILS
+--------------------------------------------------------------------------------
+
+  [PASS] Polite customer checks order status (polite, 2 turns, 12.5s)
+    Tools: ['lookup_order']
+    GoalCompletion: 1.00
+    ToolUsage: 1.00
+    TurnEfficiency: 0.80
+    ConversationQuality: 1.00
+    PolicyAdherence: 1.00
+
+  [PASS] Demanding customer wants order update (demanding, 2 turns, 12.2s)
+    Tools: ['lookup_order']
+    GoalCompletion: 1.00
+    ToolUsage: 1.00
+    TurnEfficiency: 0.80
+    ConversationQuality: 1.00
+    PolicyAdherence: 1.00
+
+  [PASS] Customer wants to return a product (neutral, 2 turns, 12.7s)
+    Tools: ['lookup_order', 'process_return']
+    GoalCompletion: 1.00
+    ToolUsage: 1.00
+    TurnEfficiency: 0.80
+    ConversationQuality: 1.00
+    PolicyAdherence: 1.00
+
+  [PASS] Confused customer needs product help (confused, 3 turns, 21.3s)
+    Tools: ['search_products']
+    GoalCompletion: 1.00
+    ToolUsage: 1.00
+    TurnEfficiency: 0.60
+    ConversationQuality: 1.00
+    PolicyAdherence: 1.00
+
+  [PASS] Customer changes shipping address (polite, 1 turns, 7.3s)
+    Tools: ['lookup_order', 'update_shipping_address']
+    GoalCompletion: 1.00
+    ToolUsage: 1.00
+    TurnEfficiency: 1.00
+    ConversationQuality: 1.00
+    PolicyAdherence: 1.00
+
+================================================================================
+
+2026-04-06 15:01:16,621,p8124,{eval.py:650},INFO,Evaluation summary saved to metrics.txt
+2026-04-06 15:01:16,622,p8124,{eval.py:730},INFO,Evaluation metrics exported to eval_metrics.json
+2026-04-06 15:01:16,623,p8124,{eval.py:854},INFO,Evaluation completed in 1 minutes and 6.2 seconds
